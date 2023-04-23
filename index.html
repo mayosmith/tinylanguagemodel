@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Tiny Language Model</title> 
+
+
+    <link rel="stylesheet" href="css/tlm.css">
+
+    <script>
+        function onButton1Click() {
+            trainPenny();   
+        }
+        function onButton2Click() {
+            testPenny();   
+        }
+        function onCorpusButtonClick() {
+            createCorpus();  
+        }
+        function onButtonTrainClick() {
+            trainPenny();   
+        }
+
+
+    </script>
+
+<style>
+
+</style>
+
+</head>
+<body>
+    <div class="sm-subheader">
+        <a href= "https://johnmayosmith.substack.com/p/tiny-language-model">Read Article about Tiny Language Model</a>
+    </div>
+    <div class="header">
+
+        Tiny Language Model
+    </div>
+
+    <div class="subheader">
+    Vocabulary
+    </div>
+
+
+    <div class="form-group">
+        <label class="label" for="adjective"></label>
+        <input class="input" type="text" id="adjective" name="adjective" value="red blue">
+        <p class="direction">try two adjectives separated by a space</p>
+    </div>
+
+    <div class="form-group">
+        <label class="label" for="noun"></label>
+        <input class="input" type="text" id="noun" name="noun" value="dog cat">
+        <p class="direction">try two nouns separated by a space</p>
+    </div>
+    <div class="form-group">
+        <label class="label" for="verb"></label>
+        <input class="input" type="text" id="verb" name="verb" value="jumps sleeps">
+        <p class="direction">try two verbs separated by a space</p>
+    </div>
+<hr>
+
+    <div class="form-group">
+
+        <label class="label" ><h2>Training Text</h2></label>
+        <textarea class="textarea" id="corpus" rows="6" cols="30" >
+red dog sleeps
+blue dog jumps
+red cat jumps
+blue cat sleeps
+        </textarea>
+
+    </div>
+    <div class="form-group">
+        <button class="smallbtn" onclick="onCorpusButtonClick()">Reset Training Text</button>
+    </div>
+    <div class="form-group">
+        <button class="medbtn" onclick="onButtonTrainClick()">Train Tiny Language Model</button>
+        <p class="direction">(1,000 training passes)</p>
+    </div>
+
+
+<div class="form-group">
+    <canvas  id="canvas1" width="800" height="600"></canvas>
+</div>
+
+</body>
+
+<script src="tlm-ui.js"></script>
+<script src="tlm-utilities.js"></script>
+<script src="tlm.js"></script>
+
+</html>
