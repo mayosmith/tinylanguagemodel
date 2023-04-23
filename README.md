@@ -1,8 +1,6 @@
 # tinylanguagemodel
 
 
-Tiny Language Model
-A dog, a cat, and a language model
 
 Tiny Language Model (TLM) is a functional language model based on a small neural network that runs in your browser. It has the capability to learn and generate responses based on a six word customizable vocabulary. While very limited, it can offer insights into vastly more complex language models like ChatGPT.
 
